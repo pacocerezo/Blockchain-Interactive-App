@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block main %}
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <form action="/dashboard" method="post">
+            <button style="margin-left: 15px; background-color: #A51C30; border: none;" type="submit" class="btn btn-primary btn-lg">Restart blockchain</button>
+        </form>
+    </div>
+    <br>
+    <h1>Blocks on chain</h1>
+    <h5>Each card represents a block on the chain.</h5>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    {% for block in blocks %}
+    <div class="col">
+        <div class="card" id="block-card" style="width: 18rem; margin-top: 20px;">
+
+            <div class="card-body">
+                <h4 class="card-title">Block {{ loop.index }}</h4>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <h5>Hash </h5>
+                <div class="text-truncate">
+                    <small>{{ block['hash'] }}</small><br>
+                </div>
+                </li>
+                <li class="list-group-item">
+                    <h5>Hash of previous block</h5>
+                <div class="text-truncate">
+                    <small>{{ block['previousHash'] }}</small>
+                </div>
+                </li>
+
+                <li class="list-group-item">
+                    <h5>Nonce</h5>
+                    <small>{{ block['nonce'] }}</small>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+
+    <br><br>
+    <div class="container">
+        <h1>Transactions on chain</h1>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">sender</th>
+                <th scope="col">receiver</th>
+                <th scope="col">balance</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for block in blocks %}
+                    {% for transaction in block.transactions %}
+                        <tr>
+                            <td>{{ transaction['senderAddress'] }}</td>
+                            <td>{{ transaction['receiverAddress'] }}</td>
+                            <td>{{ transaction['amount'] }}</td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+    <br><br>
+    <div class="container">
+        <h1>Wallets on chain</h1>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">address</th>
+                <th scope="col">balance</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for wallet in wallets %}
+                    <tr>
+                        <td>{{ wallet['id'] }}</td>
+                        <td>{{ wallet['address'] }}</td>
+                        <td>{{ wallet['balance'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+{% endblock %}

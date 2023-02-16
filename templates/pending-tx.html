@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Pending Tx's
+{% endblock %}
+
+{% block main %}
+
+<h1>Pending transactions</h1>
+<h3>This transactions are waiting to be included in the next block.</h3>
+
+<br><br>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sender</th>
+            <th scope="col">Receiver</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for tx in pending %}
+            <tr>
+                <td>{{ tx['senderAddress'] }}</td>
+                <td>{{ tx['receiverAddress'] }}</td>
+                <td>{{ tx['amount'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+<form action="/mine" method="post">
+    <button style="background-color: #A51C30; border: none;" type="submit" class="btn btn-primary btn-lg">Start mining</button>
+</form>
+{% endblock %}

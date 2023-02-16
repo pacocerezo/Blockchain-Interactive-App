@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira sans', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 128px;
+  padding-right: 128px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+      padding-left: 64px;
+      padding-right: 64px;
+ }
+}
+
+@media (max-width: 767px) {
+  .container {
+      padding-left: 32px;
+      padding-right: 32px;
+ }
+}
+
+.imgnav {
+    margin: auto;
+    width: 10vh;
+    height: 10vh;
+    background: blue;
+    border-radius: 50%;
+  }
+
+.error {
+  color: red;
+}

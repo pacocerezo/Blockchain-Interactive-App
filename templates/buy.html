@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+
+<h1>Add coins to your wallet</h1>
+
+    <form action="/buy" method="post">
+
+        <h4>Amount</h4>
+        <input style="width: 100px;" autocomplete="off" autofocus type="number" min="1" id="form3Example3c" name="amount" class="form-control">
+        <br>
+        <label>How many coins do you want to buy?</label><br>
+
+        <button style="margin-top: 20px; background-color: #A51C30; border: none;" class="btn btn-primary" type="submit">Buy</button>
+
+    </form>
+
+{% endblock %}

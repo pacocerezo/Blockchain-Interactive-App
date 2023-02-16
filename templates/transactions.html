@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transactions
+{% endblock %}
+
+{% block main %}
+
+<h1>Create transaction</h1>
+<h3>Transfer some money to someone!</h3>
+
+<br>
+
+<form action="/transactions" method="post">
+
+    <h4>Receiver</h4>
+    <input required style="width: 150px;" autocomplete="off" autofocus type="text" id="form3Example3c" name="receiver" class="form-control">
+    <label>Who are you sending coins to?</label>
+    <br><br>
+
+    <h4>Amount</h4>
+    <input style="width: 100px;" autocomplete="off" autofocus type="number" min="1" id="form3Example3c" name="amount" class="form-control">
+    <label>How many coins do you want to send?</label>
+    <br><br>
+
+    <button style="margin-top: 20px; background-color: #A51C30; border: none;" class="btn btn-primary" type="submit">Send</button>
+
+</form>
+
+{% endblock %}

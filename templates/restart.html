@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Restart
+{% endblock %}
+
+{% block main %}
+
+<h1 style="margin-bottom: 25px;">Are you sure you want to restart the blockchain?</h1>
+
+<form action="/restart" method="post">
+    <button style="background-color: #A51C30; border: none;" type="submit" class="btn btn-primary btn-lg">Restart Blockchain</button>
+</form>
+
+{% endblock %}
