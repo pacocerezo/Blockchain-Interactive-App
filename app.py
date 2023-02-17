@@ -101,7 +101,7 @@ def dashboard():
 def login():
 
     # Forget any user_id
-    session.clear()
+    # session.clear()
 
     # User reached route via POST
     if request.method == "POST":
