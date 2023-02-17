@@ -1,6 +1,6 @@
 cs50
 Flask
 Flask-Session
-werkzeug.security
+Werkzeug
 hashlib
 functools
