@@ -1,7 +1,7 @@
 from flask import redirect, session
 from functools import wraps
 
-# Login required function taken from finance problem
+# Login required function
 def login_required(f):
     """
     Decorate routes to require login.
