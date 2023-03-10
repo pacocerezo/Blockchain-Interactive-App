@@ -1,5 +1,7 @@
 # INTERACTIVE BLOCKCHAIN
 
+![MAIN](https://user-images.githubusercontent.com/111921924/224286409-b680ba84-1226-412e-8bd2-3ca50b045219.png)
+
 #### https://interactive-blockchain-app.onrender.com/
 
 (Testing: Username & password-> david)
@@ -142,6 +144,8 @@ As we can see it adds to the block a transaction to reward the miner who solved 
 
 ## Flask app:
 
+![MAIN](https://user-images.githubusercontent.com/111921924/224286829-b0b5d5e6-9f44-4f14-a9fd-e20bb424b036.png)
+
 Styling is simple. From the beginning I was focused on the backend coding as I started this project to learn about blockchain. In future works I'll focus on learning Angular or React to be able to present really great looking apps.
 
 Ducks are cool and this is a duck themed app. I tried different approaches but this one I liked it since implementing it for the first time.
@@ -179,6 +183,8 @@ Simple form to create a transaction from the blockchain treasury to the logged i
 Form to create a transaction from the logged in user to the desired addressee. Receiver must be a registered wallet to avoid the user from losing the funds. Amount must be a positive rounded integer and equal or lower than his balance.
 
 #### Pending-tx:
+
+![MAIN](https://user-images.githubusercontent.com/111921924/224286680-99e1c277-4505-45b2-b7da-42155d49b65c.png)
 
 No created transaction exist in the blockchain or alter it in anyway until they are included in a block. In this section we can see all the pending transactions waiting to be inserted in the next mining process and proceed with it.
 
